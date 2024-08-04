@@ -27,9 +27,19 @@
         <h2>By Mishkat Mazumder</h2>
     </footer>
 
+
+
     <script>
         let humanScore = 0;
         let computerScore = 0;
+
+        const divbox = document.querySelector(".scoreboard")
+        const divy = document.createElement("div")
+        divy.textContent = "Are you the best at rock paper scissors?"
+
+        divbox.appendChild(divy)
+
+
 
         function getComputerChoice() {
             const choices = ['rock', 'paper', 'scissors'];
@@ -60,5 +70,8 @@
             document.getElementById('result').textContent = `Human chose ${humanChoice}, Computer chose ${computerChoice}. ${resultMessage}`;
         }
     </script>
+
+
+
 </body>
 </html>
