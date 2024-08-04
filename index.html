@@ -9,23 +9,66 @@
 
 </head>
 
+<script>
+    let humanScore = 0
+    let computerScore = 0
+    
+    function getComputerChoice()
+    {
+        let x = Math.random(1,3)
+        console.log(x)
+
+        if(x == 1){
+            console.log(scissors)
+        }
+        
+        if(x == 2){
+            console.log(rock)
+        }
+
+        if(x==3){
+            console.log(paper)
+        }
+    
+    }
+
+    
+    function getHumanChoice()
+    {
+        let action = prompt("what action: r/p/c ")
+        
+    }
+
+</script>
+
 <body>
     
     <header>
         <h1>Rock Paper Scissors</h1>
-
+        
     </header>
+    
 
     <main>
 
-        main icons
+        <icon>
+            <button>rock</button>
+        </icon>
 
+        <icon>
+            <button>paper</button>
+        </icon>
+
+        <icon>
+            <button>scissors</button>
+        </icon>
+        
     </main>
 
     <footer>
 
         <h2>By Mishkat Mazumder        </h2>
-        
+
     </footer>
 
 

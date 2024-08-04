@@ -1,8 +1,25 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
 header{
 
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: pink;
+}
+
+
+main
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    gap: 15%;
 }
 
 
@@ -12,6 +29,10 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    background-color: lightcoral
 }
+
+
+
+
 
