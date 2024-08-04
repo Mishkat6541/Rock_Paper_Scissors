@@ -10,37 +10,68 @@
 </head>
 
 <script>
-    let humanScore = 0
-    let computerScore = 0
-    
-    function getComputerChoice()
-    {
-        let x = Math.random(1,3)
-        console.log(x)
+    let humanScore = 0;
+    let computerScore = 0;
 
-        if(x == 1){
-            console.log(scissors)
-        }
-        
-        if(x == 2){
-            console.log(rock)
+    function getComputerChoice() {
+        let x = Math.floor(Math.random() * 3) + 1;
+        let choice;
+
+        if (x === 1) {
+            choice = 'scissors';
+        } else if (x === 2) {
+            choice = 'rock';
+        } else if (x === 3) {
+            choice = 'paper';
         }
 
-        if(x==3){
-            console.log(paper)
-        }
+        console.log('Computer chose:', choice);
+        return choice;
+    }
     
+    function getHumanChoice() {
+        let action = prompt("What action: r/p/c ");
+        let choice;
+
+        if (action === 'r') {
+            choice = 'rock';
+        } else if (action === 'p') {
+            choice = 'paper';
+        } else if (action === 'c') {
+            choice = 'scissors';
+        } else {
+            console.log('Invalid choice');
+            return getHumanChoice(); // Prompt again if invalid
+        }
+
+        console.log('Human chose:', choice);
+        return choice;
     }
 
-    
-    function getHumanChoice()
-    {
-        let action = prompt("what action: r/p/c ")
-        
+    function playRound() {
+        const computerChoice = getComputerChoice();
+        const humanChoice = getHumanChoice();
+
+        if (computerChoice === humanChoice) {
+            console.log("It's a tie!");
+        } else if (
+            (humanChoice === 'rock' && computerChoice === 'scissors') ||
+            (humanChoice === 'scissors' && computerChoice === 'paper') ||
+            (humanChoice === 'paper' && computerChoice === 'rock')
+        ) {
+            console.log('Human wins this round!');
+            humanScore++;
+        } else {
+            console.log('Computer wins this round!');
+            computerScore++;
+        }
+
+        console.log(`Scores => Human: ${humanScore}, Computer: ${computerScore}`);
     }
 
+    // Start the game by playing a round
+    playRound();
 </script>
-
 <body>
     
     <header>
