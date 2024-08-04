@@ -1,38 +1,58 @@
-body{
-    padding: 0px;
-    margin: 0px;
-    border: 0px;
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-header{
-
+header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: pink;
+    background-color: #ffb6c1;
+    padding: 20px;
 }
 
-
-main
-{
+main {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
-    gap: 15%;
+    background-color: #fff;
+    gap: 10%;
+    padding: 20px;
 }
 
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
+button:hover {
+    background-color: #ddd;
+}
 
-footer{
-
+footer {
+    
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: lightcoral
+    background-color: #f08080;
+    padding: 10px;
 }
 
+.scoreboard {
+    text-align: center;
+    margin: 20px 0;
+}
 
-
-
+.results {
+    text-align: center;
+    margin: 20px 0;
+}
 
